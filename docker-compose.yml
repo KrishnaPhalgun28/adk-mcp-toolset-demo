@@ -1,0 +1,22 @@
+services:
+  adk:
+    platform: linux/amd64
+    build:
+      context: .
+    container_name: adk-mcp-router
+    ports:
+      - "8888:8888"
+    environment:
+      ADK_HOST: 0.0.0.0
+      ADK_PORT: 8888
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+      TWITTER_CT0: ${TWITTER_CT0:-}
+      TWITTER_AUTH_TOKEN: ${TWITTER_AUTH_TOKEN:-}
+      TWITTER_MCP_SERVER_PATH: ${TWITTER_MCP_SERVER_PATH:-/app/external/twitter-mcp-server/server.py}
+      GITHUB_MCP_SERVER_PATH: /usr/local/bin/github-mcp-server
+      GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN:-}
+      GITHUB_TOOLSETS: ${GITHUB_TOOLSETS:-default,issues,pull_requests,repos}
+    volumes:
+      - ./:/app
+    restart: unless-stopped

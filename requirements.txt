@@ -1,0 +1,6 @@
+google-adk==1.16.0
+certifi>=2024.7.4
+pyyaml>=6.0.2
+twikit>=2.3.3
+python-dotenv>=1.0.1
+mcp>=1.0.0
