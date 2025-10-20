@@ -32,3 +32,7 @@ It works by using the MCPToolset framework to launch each stdio MCP server and e
 
 3. Open the UI  
    http://localhost:8888/dev-ui/#/app?relative_path=./&app=agent
+
+## ADK Web UI Screenshot
+
+<img width="2560" height="1318" alt="screencapture-localhost-8888-dev-ui-2025-10-20-23_30_10" src="https://github.com/user-attachments/assets/36e2455e-3eda-4055-ae02-742f4b44c7ec" />
